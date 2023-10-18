@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="761.0" prefWidth="1431.0" style="-fx-background-color: ffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.international.SalarySlip">
+   <children>
+      <BorderPane prefHeight="761.0" prefWidth="1431.0">
+         <right>
+            <Pane prefHeight="761.0" prefWidth="1088.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="txtSearch" layoutX="471.0" layoutY="227.0" onAction="#searchemp" prefWidth="240.0" />
+                  <Text layoutX="113.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emplyee ID">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtID" editable="false" layoutX="240.0" layoutY="315.0" prefWidth="240.0" />
+                  <Text layoutX="111.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emplyee Name">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtEmpName" editable="false" layoutX="240.0" layoutY="366.0" prefWidth="240.0" />
+                  <Text layoutX="111.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtPhone" editable="false" layoutX="240.0" layoutY="424.0" prefWidth="240.0" />
+                  <Text layoutX="113.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Designantionn">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtDesignation" editable="false" layoutX="240.0" layoutY="479.0" prefWidth="240.0" />
+                  <Text layoutX="111.0" layoutY="547.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Basic Salary">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtBasicSalary" editable="false" layoutX="240.0" layoutY="529.0" prefWidth="240.0" />
+                  <Button layoutX="490.0" layoutY="635.0" mnemonicParsing="false" onAction="#writeUsingIText" prefHeight="34.0" prefWidth="117.0" style="-fx-background-color: #85B3D1FF;" text="Genarate Slip">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Text layoutX="599.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OT">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtOT" editable="false" layoutX="711.0" layoutY="316.0" prefWidth="240.0" />
+                  <Text layoutX="600.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Allowance">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtAllowance" editable="false" layoutX="711.0" layoutY="369.0" prefWidth="240.0" />
+                  <Text layoutX="600.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bonus">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtBonus" editable="false" layoutX="711.0" layoutY="424.0" prefWidth="240.0" />
+                  <Text layoutX="600.0" layoutY="499.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deduction">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtDeduction" editable="false" layoutX="711.0" layoutY="479.0" prefWidth="240.0" />
+                  <Text layoutX="604.0" layoutY="549.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtTotal" editable="false" layoutX="711.0" layoutY="529.0" prefWidth="240.0" />
+                  <Label alignment="CENTER" layoutX="19.0" layoutY="80.0" prefHeight="68.0" prefWidth="1054.0" style="-fx-background-color: #ADD8E6;" text="Employee Salary Slip">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Text layoutX="371.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emplyee ID">
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </right>
+         <left>
+            <Pane prefHeight="767.0" prefWidth="330.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Orbit International">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="btnDash" layoutX="34.0" layoutY="104.0" mnemonicParsing="false" onAction="#dashboard" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" text="Dashboard">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAccounts" layoutX="34.0" layoutY="323.0" mnemonicParsing="false" onAction="#AccountCal" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" text="Accounts">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEmployeeSalary" layoutX="34.0" layoutY="214.0" mnemonicParsing="false" onAction="#EmployeeSalary" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" text="Employee Salary">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnLogout" layoutX="34.0" layoutY="701.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: c8161d;" text="Log out">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSlip" layoutX="34.0" layoutY="269.0" mnemonicParsing="false" onAction="#SalarySlip" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #FFCA40;" text="Salary Slip">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Text layoutX="31.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Orbit International">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="btnViewSalary" layoutX="34.0" layoutY="159.0" mnemonicParsing="false" onAction="#viewEmployeeSalary" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" text="View Employee Salary">
+                     <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

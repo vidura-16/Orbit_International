@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="767.0" prefWidth="1400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.international.AddEmployeeController">
+   <children>
+      <BorderPane layoutY="-2.0" prefHeight="767.0" prefWidth="1400.0">
+         <left>
+            <Pane id="b" prefHeight="767.0" prefWidth="330.0" style="-fx-background-color: white;" stylesheets="@tableview.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="BASELINE_LEFT" layoutX="32.0" layoutY="25.0" prefHeight="56.0" prefWidth="285.0" text="Orbit International ">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnDash" layoutX="34.0" layoutY="105.0" mnemonicParsing="false" onAction="#dashboard" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" text="Dashboard">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAddEmployee" layoutX="34.0" layoutY="164.0" mnemonicParsing="false" onAction="#addEmployee" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #FFCA40;" text="Add Employee">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnViewEmployee" layoutX="35.0" layoutY="221.0" mnemonicParsing="false" onAction="#viewEmployee" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" text="View Employee">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAddApplicant" layoutX="34.0" layoutY="281.0" mnemonicParsing="false" onAction="#onActionAddApplicant" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" stylesheets="@tableview.css" text="Add Applicant">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnViewApplicant" layoutX="35.0" layoutY="344.0" mnemonicParsing="false" onAction="#viewApplicant" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" stylesheets="@tableview.css" text="View Applicant">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnleaveRequest" layoutX="32.0" layoutY="465.0" mnemonicParsing="false" onAction="#LeaveRequest" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" text="Leave Requests">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAnnouncement" layoutX="34.0" layoutY="521.0" mnemonicParsing="false" onAction="#onActionAnnouncement" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" text="Annoucements">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnMails" layoutX="35.0" layoutY="578.0" mnemonicParsing="false" onAction="#viewMails" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" text="Mails">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnLogout" layoutX="32.0" layoutY="701.0" mnemonicParsing="false" onAction="#Logout" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #C8161D;" text="Log out">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAddtask" layoutX="34.0" layoutY="405.0" mnemonicParsing="false" onAction="#addTask" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" text="Add Task">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnJobs" layoutX="34.0" layoutY="636.0" mnemonicParsing="false" onAction="#viewJobs" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" text="Add Jobs">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </left>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <top>
+                  <Pane prefHeight="0.0" prefWidth="1101.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="text" layoutX="237.0" layoutY="41.0" prefHeight="18.0" prefWidth="188.0" />
+                     </children></Pane>
+               </top>
+               <center>
+                  <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Pane layoutX="-13.0" layoutY="-1.0" prefHeight="668.0" prefWidth="1074.0">
+                           <children>
+                              <VBox layoutX="18.0" layoutY="35.0" prefHeight="702.0" prefWidth="1062.0">
+                                 <children>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" />
+                                    <SplitPane dividerPositions="0.10317746100665852" orientation="VERTICAL" prefHeight="687.0" prefWidth="1035.0">
+                                      <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="43.0" prefWidth="1034.0">
+                                             <children>
+                                                <Label alignment="CENTER" layoutX="-10.0" layoutY="-3.0" prefHeight="68.0" prefWidth="1093.0" style="-fx-background-color: #ADD8E6;" text="Employee Information ">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="339.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@images/icons8-user-64.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="588.0" prefWidth="1039.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <GridPane layoutX="23.0" prefHeight="266.0" prefWidth="983.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="270.2320203671876" minWidth="10.0" prefWidth="127.96803437695321" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="457.62400721411143" minWidth="10.0" prefWidth="323.80795256835967" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.2799940000001" minWidth="10.0" prefWidth="150.78404451171906" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.26394175390635" minWidth="10.0" prefWidth="356.26394175390635" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                                                    <RowConstraints maxHeight="19.967996770507824" minHeight="2.3040105644531383" prefHeight="19.967996770507824" />
+                                                    <RowConstraints maxHeight="70.95998713867193" minHeight="10.0" prefHeight="43.312000312500054" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="49.463987099609405" minHeight="2.30402674804688" prefHeight="9.519981615234393" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="64.76803373046877" minHeight="10.0" prefHeight="50.99201641601567" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="64.76803373046877" minHeight="6.680012250000004" prefHeight="13.591999554687504" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="81.15194486328129" minHeight="10.0" prefHeight="50.455998429687554" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="81.31999314355474" minHeight="0.0" prefHeight="12.055999601562519" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="90.67199984375003" minHeight="10.0" prefHeight="73.49599772656256" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="First Name" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="Last Name" GridPane.rowIndex="4">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label style="-fx-background-color: white;" text="Email" GridPane.rowIndex="6">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="Gender" GridPane.rowIndex="8">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="132.0" text="Date of Birth" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="txtFirstName" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="txtLastName" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                      <TextField fx:id="txtEmail" onAction="#onActionAddApplicant" prefHeight="12.0" prefWidth="329.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                      <TextField fx:id="txtNic" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                                      <TextField fx:id="txtContact" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="98.0" text="Address" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="154.0" text="Contact Number" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="130.0" text="NIC Number" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <DatePicker fx:id="txtDob" prefHeight="25.0" prefWidth="361.0" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                                                      <TextArea fx:id="txtAddress" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                                                      <Label fx:id="label1" prefHeight="18.0" prefWidth="335.0" textFill="#f41f1f" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.288000106811523" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="label2" prefHeight="18.0" prefWidth="326.0" textFill="#f41f1f" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.288000106811523" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                      <Label fx:id="label4" prefHeight="18.0" prefWidth="362.0" textFill="#f41f1f" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="label5" prefHeight="18.0" prefWidth="354.0" textFill="#f41f1f" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.288000106811523" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="label6" prefHeight="33.0" prefWidth="356.0" textFill="#f41f1f" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="txtGender" prefHeight="28.0" prefWidth="203.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                                      <Label fx:id="label3" prefHeight="18.0" prefWidth="333.0" textFill="#f41f1f" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.288000106811523" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="labelEmpID" prefHeight="19.0" prefWidth="329.0" textFill="#f41f1f" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.288000106811523" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </GridPane>
+                                                <GridPane layoutX="494.0" layoutY="264.0" prefHeight="313.0" prefWidth="511.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="241.4639539609376" minWidth="10.0" prefWidth="142.84799564062513" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="355.12807749609385" minWidth="10.0" prefWidth="353.2799892187503" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints />
+                                                    <RowConstraints />
+                                                    <RowConstraints maxHeight="77.56798376171878" minHeight="10.0" prefHeight="77.56798376171878" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="41.47202586132814" minHeight="0.7680138476563059" prefHeight="0.7680138476563059" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="69.31997464843754" minHeight="10.0" prefHeight="41.471971607421935" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="69.31997464843754" minHeight="0.09595774609377372" prefHeight="6.144028171875036" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="69.31997464843754" minHeight="1.048046877372144E-5" prefHeight="1.048046877372144E-5" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="69.31997464843754" minHeight="0.09595774609377372" prefHeight="2.535985464843762" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="61.5839822167969" minHeight="10.0" prefHeight="38.70399875781254" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="59.95193604687506" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="59.95193604687506" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="59.95193604687506" minHeight="3.1439961132812755" prefHeight="3.1439961132812755" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="59.95193604687506" minHeight="3.1439961132812755" prefHeight="3.1439961132812755" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="56.3439756445313" minHeight="10.0" prefHeight="44.616002246093785" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="52.27200101562502" minHeight="10.0" prefHeight="21.527968281250025" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="52.27200101562502" minHeight="10.0" prefHeight="21.527968281250025" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="63.02407590234378" minHeight="10.0" prefHeight="63.02407590234378" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="8.0" prefWidth="108.0" text="User Name" GridPane.rowIndex="8">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="95.0" text="Password" GridPane.rowIndex="13">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="88.0" text="Position" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="73.0" text="Salary" GridPane.rowIndex="4">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="txtSalary" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                      <PasswordField fx:id="txtPassword" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+                                                      <Label fx:id="label9" prefHeight="18.0" prefWidth="357.0" textFill="#f41f1f" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="label10" prefHeight="2.0" prefWidth="356.0" textFill="#f41f1f" GridPane.columnIndex="1" GridPane.rowIndex="14">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="txtPosition" prefHeight="28.0" prefWidth="378.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <Label fx:id="labelPosition" prefHeight="18.0" prefWidth="362.0" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+                                                      <Label fx:id="label711" prefHeight="18.0" prefWidth="356.0" textFill="#f41f1f" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.288000106811523" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="label20" prefHeight="15.0" prefWidth="356.0" textFill="#f41f1f" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="label21" prefHeight="15.0" prefWidth="356.0" textFill="#f41f1f" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="label22" prefHeight="15.0" prefWidth="356.0" textFill="#f41f1f" GridPane.columnIndex="1" GridPane.rowIndex="12">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="label23" prefHeight="15.0" prefWidth="356.0" textFill="#f41f1f" GridPane.columnIndex="1" GridPane.rowIndex="14">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="txtUsername" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                                      <Label fx:id="label82" prefHeight="7.0" prefWidth="353.0" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.288000106811523" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </GridPane>
+                                                <GridPane layoutX="22.0" layoutY="282.0" prefHeight="265.0" prefWidth="470.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="268.3999891171876" minWidth="10.0" prefWidth="141.11204050781265" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.3679761777345" minWidth="10.0" prefWidth="255.02403490234394" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.3679761777345" minWidth="10.0" prefWidth="76.59195485546888" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints maxHeight="183.0160072382814" minHeight="10.0" prefHeight="183.0160072382814" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="79.57595609375002" minHeight="4.8239724511718975" prefHeight="36.3279861289063" vgrow="SOMETIMES" />
+                                                    <RowConstraints maxHeight="79.57595609375002" minHeight="4.8239724511718975" prefHeight="36.3279861289063" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="62.111966835937494" minHeight="10.0" prefHeight="57.503995644531244" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="119.0" text="Profile Picture">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Button fx:id="btnBrowse" mnemonicParsing="false" onAction="#BrowseButton" style="-fx-background-color: #7393B3;" text="Browse" textFill="#edece6" GridPane.columnIndex="2">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.288000106811523" />
+                                                         </font></Button>
+                                                      <TextField fx:id="txtPath" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="104.0" text="Date of Join" GridPane.rowIndex="3">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <DatePicker fx:id="txtDateOfJoin" prefHeight="25.0" prefWidth="363.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <ImageView fx:id="imageView" fitHeight="160.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                                                         <image>
+                                                            <Image url="@images/profilepic.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Label fx:id="label8" prefHeight="18.0" prefWidth="333.0" textFill="#f41f1f" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.288000106811523" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </GridPane>
+                                                <Button fx:id="btnReset" layoutX="881.0" layoutY="503.0" mnemonicParsing="false" onAction="#ResetButtonAction" prefHeight="42.0" prefWidth="130.0" style="-fx-background-color: red;" text="Reset" textFill="#1e1212">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button fx:id="btnSave" layoutX="717.0" layoutY="503.0" mnemonicParsing="false" onAction="#SaveButtonAction" prefHeight="41.0" prefWidth="151.0" style="-fx-background-color: #85B3D1FF;" text="Save Details" textFill="#1b0606">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Button>
+                                                <ImageView fitHeight="33.0" fitWidth="29.0" layoutX="717.0" layoutY="509.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@images/icons8-submit-resume-90.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="881.0" layoutY="508.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@images/icons8-reset-100.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="label7" layoutX="161.0" layoutY="257.0" prefHeight="18.0" prefWidth="333.0" textFill="#f41f1f">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.288000106811523" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="label811" layoutX="160.0" layoutY="554.0" prefHeight="25.0" prefWidth="256.0" textFill="RED">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.288000106811523" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                      </items>
+                                    </SplitPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

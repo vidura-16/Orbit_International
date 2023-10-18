@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.international.loginController">
+   <children>
+      <ImageView fx:id="bgImageView" fitHeight="481.0" fitWidth="457.0" layoutX="429.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.3;">
+         <image>
+            <Image url="@Backoffice-clipart-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="386.0" layoutY="30.0" prefHeight="541.0" prefWidth="457.0" style="-fx-border-color: #EFEFEF;" AnchorPane.bottomAnchor="29.0" AnchorPane.rightAnchor="57.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <Label prefHeight="46.0" prefWidth="127.0" style="-fx-border-color: #85B3D1FF; -fx-border-radius: 5px;" text="Login">
+               <font>
+                  <Font name="Arial Bold" size="26.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="164.0" top="66.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="29.0" right="5.0" top="-3.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtUsernameLogin" onMouseClicked="#ClearField" prefHeight="50.0" prefWidth="273.0" promptText="Username" style="-fx-background-color: transparent; -fx-background-radius: 10px 10px 0px 0px; -fx-border-color: #85B3D1FF; -fx-border-width: 0px 0px 1px 0px;">
+               <VBox.margin>
+                  <Insets left="70.0" right="70.0" top="60.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman" size="22.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="txtPassword" onMouseClicked="#ClearField" prefHeight="56.0" prefWidth="487.0" promptText="Password" style="-fx-background-color: transparent; -fx-background-radius: 10px 10px 0px 0px; -fx-border-color: #85B3D1FF; -fx-border-width: 0px 0px 1px 0px;">
+               <VBox.margin>
+                  <Insets left="70.0" right="70.0" top="40.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman" size="22.0" />
+               </font>
+            </PasswordField>
+            <Label fx:id="loginMessageLabel" prefHeight="31.0" prefWidth="369.0" textFill="#ff0f0f">
+               <VBox.margin>
+                  <Insets left="39.0" top="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="loginButton" maxWidth="200.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #85B3D1FF; -fx-background-radius: 10px; -fx-border-color: #EFEFEF; -fx-border-radius: 10px;" text="Login">
+               <VBox.margin>
+                  <Insets left="129.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman" size="26.0" />
+               </font>
+            </Button>
+            <Button fx:id="manager" mnemonicParsing="false" onAction="#manager" prefHeight="25.0" prefWidth="455.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="forgotPassword" mnemonicParsing="false" onAction="#forgotPassword" prefHeight="46.0" prefWidth="264.0" style="-fx-background-color: transparent;" text="Forgot Password?" textFill="#0095ff">
+               <VBox.margin>
+                  <Insets left="98.0" top="24.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Button>
+            <Label fx:id="namelabel" prefHeight="17.0" prefWidth="211.0" textFill="#fffefe" />
+         </children>
+      </VBox>
+      <VBox layoutX="35.0" layoutY="18.0" prefHeight="569.0" prefWidth="311.0" style="-fx-background-color: #85B3D1FF; -fx-background-radius: 10px;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label prefHeight="65.0" prefWidth="220.0" text="Welcome!">
+               <font>
+                  <Font name="System Bold" size="44.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" top="90.0" />
+               </VBox.margin>
+            </Label>
+            <Label prefHeight="36.0" prefWidth="351.0" text="Orbit International Pvt(Ltd.)   ">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="28.0" top="30.0" />
+               </VBox.margin>
+            </Label>
+            <ImageView fx:id="brandingImageView" fitHeight="185.0" fitWidth="241.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@travel-removebg-preview.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="50.0" top="90.0" />
+               </VBox.margin>
+            </ImageView>
+         </children>
+      </VBox>
+      <Label layoutX="24.0" layoutY="-23.0" text="Label" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EmpReport_A4_1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c40f7a4b-ea27-45b9-beea-0f493d397351">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample_Adapter"/>
+	<subDataset name="Empty Dataset1" uuid="ecc15572-1d92-4a5f-91d5-12853cc580f6"/>
+	<parameter name="FirstName" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$F{firstName}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="LastName" class="java.lang.String"/>
+	<parameter name="Email" class="java.lang.String"/>
+	<parameter name="ContactNum" class="java.lang.String"/>
+	<parameter name="Position" class="java.lang.String"/>
+	<parameter name="Salary" class="java.lang.String"/>
+	<parameter name="DateOfJoin" class="java.lang.String"/>
+	<parameter name="DateOfBirth" class="java.lang.String"/>
+	<parameter name="Address" class="java.lang.String"/>
+	<parameter name="NIC" class="java.lang.String"/>
+	<parameter name="Gender" class="java.lang.String"/>
+	<parameter name="EmpID" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select * from employee]]>
+	</queryString>
+	<field name="EmpID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="EmpID"/>
+		<property name="com.jaspersoft.studio.field.label" value="EmpID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="firstName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="firstName"/>
+		<property name="com.jaspersoft.studio.field.label" value="firstName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lastName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="lastName"/>
+		<property name="com.jaspersoft.studio.field.label" value="lastName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="username" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="username"/>
+		<property name="com.jaspersoft.studio.field.label" value="username"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="password" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="password"/>
+		<property name="com.jaspersoft.studio.field.label" value="password"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="profilePicture" class="byte[]">
+		<property name="com.jaspersoft.studio.field.name" value="profilePicture"/>
+		<property name="com.jaspersoft.studio.field.label" value="profilePicture"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="email"/>
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="address"/>
+		<property name="com.jaspersoft.studio.field.label" value="address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dob" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="dob"/>
+		<property name="com.jaspersoft.studio.field.label" value="dob"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="gender"/>
+		<property name="com.jaspersoft.studio.field.label" value="gender"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="status"/>
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nic" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nic"/>
+		<property name="com.jaspersoft.studio.field.label" value="nic"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dateofJoin" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="dateofJoin"/>
+		<property name="com.jaspersoft.studio.field.label" value="dateofJoin"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telephoneNum" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="telephoneNum"/>
+		<property name="com.jaspersoft.studio.field.label" value="telephoneNum"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="salary" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="salary"/>
+		<property name="com.jaspersoft.studio.field.label" value="salary"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="99" splitType="Stretch">
+			<staticText>
+				<reportElement x="120" y="0" width="310" height="30" uuid="a70e7b0d-999f-4c33-be9b-38803c5ca651"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Orbit International (Pvt) Ltd]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="460" y="32" width="100" height="30" uuid="8c59e233-109a-4046-9271-933ea971bb97"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="460" y="50" width="100" height="30" uuid="be59e9a9-fd38-4957-b554-177aac316fcf"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="60" width="180" height="30" uuid="934df5e6-fec0-40ef-87d2-e3f75212fa4d"/>
+				<textElement>
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Employee Details]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="277" splitType="Stretch">
+			<textField>
+				<reportElement x="210" y="0" width="100" height="30" uuid="0bcc0a27-db73-42dc-8e39-108b34c1bafe"/>
+				<textFieldExpression><![CDATA[$P{LastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="0" width="100" height="30" uuid="bc155b2b-7f63-424d-a952-1129f9ad4977"/>
+				<textFieldExpression><![CDATA[$P{FirstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="30" width="190" height="30" uuid="47616a03-b508-457c-a315-0abe10f57c63"/>
+				<textFieldExpression><![CDATA[$P{Email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="60" width="100" height="30" uuid="faff4f9e-4258-4b67-8f6e-38fd5deca013"/>
+				<textFieldExpression><![CDATA[$P{ContactNum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="0" width="100" height="30" uuid="52dfaf16-9bbc-446a-8091-aee0971cd485"/>
+				<textFieldExpression><![CDATA[$P{Position}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="30" width="100" height="30" uuid="7128c9be-e7d6-4d6f-a603-8fd1e62af68e"/>
+				<textFieldExpression><![CDATA[$P{Salary}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="60" width="100" height="30" uuid="fe16b231-d68d-4268-9b41-c6c5a86c895a"/>
+				<textFieldExpression><![CDATA[$P{DateOfJoin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="180" width="100" height="30" uuid="8a4f8175-9a5d-4c42-91dd-07434852c37a"/>
+				<textFieldExpression><![CDATA[$P{DateOfBirth}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="90" width="230" height="30" uuid="4466acc9-7cb4-4baf-8edc-9691cf21debf"/>
+				<textFieldExpression><![CDATA[$P{Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="150" width="100" height="30" uuid="2d570d45-9da1-489a-8e86-8d28bec9a602"/>
+				<textFieldExpression><![CDATA[$P{NIC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="120" width="100" height="30" uuid="465e1619-a3b7-48bb-8966-dd388a1efc00"/>
+				<textFieldExpression><![CDATA[$P{Gender}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="ca1c5ea7-dc82-40ff-84ee-9aa3c3702167"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="100" height="30" uuid="b7ebb4a7-867b-4001-b10c-601d6c9619bb"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="100" height="30" uuid="b8f21acc-701e-48d7-a6a2-aebade8945cc"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="90" width="100" height="30" uuid="b67c4eee-8b5d-44ea-a6e6-22531bee7939"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="120" width="100" height="30" uuid="ea836e1b-9b64-411d-bd64-70980a5d8851"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="150" width="100" height="30" uuid="22564a25-6e35-4ac4-a703-0b17c14bdfb1"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIC Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="180" width="100" height="30" uuid="4cdbb75b-3649-411e-b281-948b34a54f71"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date Of Birth]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="0" width="100" height="30" uuid="188460ba-5600-4918-8a9d-266923b2f8e5"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Position]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="30" width="100" height="30" uuid="289057cb-92cd-4810-a969-cd7a9e806ce7"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="60" width="100" height="30" uuid="34ed2110-f848-4775-acac-963b9297ce56"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date Of Join]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="214" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="767.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.international.AnnouncementController">
+   <children>
+      <BorderPane prefHeight="763.0" prefWidth="1396.0">
+          <left>
+              <Pane id="b" prefHeight="767.0" prefWidth="330.0" style="-fx-background-color: white;" stylesheets="@tableview.css" BorderPane.alignment="CENTER">
+                  <children>
+                      <Label alignment="BASELINE_LEFT" layoutX="32.0" layoutY="25.0" prefHeight="56.0" prefWidth="285.0" text="Orbit International ">
+                          <font>
+                              <Font name="System Bold" size="30.0" />
+                          </font>
+                      </Label>
+                      <Button fx:id="btnDash" layoutX="32.0" layoutY="105.0" mnemonicParsing="false" onAction="#dashboard" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" text="Dashboard">
+                          <font>
+                              <Font name="System Bold" size="18.0" />
+                          </font>
+                      </Button>
+                      <Button fx:id="btnAddEmployee" layoutX="34.0" layoutY="164.0" mnemonicParsing="false" onAction="#addEmployee" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" text="Add Employee">
+                          <font>
+                              <Font name="System Bold" size="18.0" />
+                          </font>
+                      </Button>
+                      <Button fx:id="btnViewEmployee" layoutX="35.0" layoutY="221.0" mnemonicParsing="false" onAction="#viewEmployee" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" text="View Employee">
+                          <font>
+                              <Font name="System Bold" size="18.0" />
+                          </font>
+                      </Button>
+                      <Button fx:id="btnAddApplicant" layoutX="34.0" layoutY="281.0" mnemonicParsing="false" onAction="#onActionAddApplicant" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" stylesheets="@tableview.css" text="Add Applicant">
+                          <font>
+                              <Font name="System Bold" size="18.0" />
+                          </font>
+                      </Button>
+                      <Button fx:id="btnViewApplicant" layoutX="35.0" layoutY="344.0" mnemonicParsing="false" onAction="#viewApplicant" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" stylesheets="@tableview.css" text="View Applicant">
+                          <font>
+                              <Font name="System Bold" size="18.0" />
+                          </font>
+                      </Button>
+                      <Button fx:id="btnleaveRequest" layoutX="32.0" layoutY="465.0" mnemonicParsing="false" onAction="#LeaveRequest" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" text="Leave Requests">
+                          <font>
+                              <Font name="System Bold" size="18.0" />
+                          </font>
+                      </Button>
+                      <Button fx:id="btnAnnouncement" layoutX="34.0" layoutY="521.0" mnemonicParsing="false" onAction="#onActionAnnouncement" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #FFCA40;" text="Annoucements">
+                          <font>
+                              <Font name="System Bold" size="18.0" />
+                          </font>
+                      </Button>
+                      <Button fx:id="btnMails" layoutX="32.0" layoutY="578.0" mnemonicParsing="false" onAction="#viewMails" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" text="Mails">
+                          <font>
+                              <Font name="System Bold" size="18.0" />
+                          </font>
+                      </Button>
+                      <Button fx:id="btnLogout" layoutX="32.0" layoutY="701.0" mnemonicParsing="false" onAction="#Logout" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #C8161D;" text="Log out">
+                          <font>
+                              <Font name="System Bold" size="18.0" />
+                          </font>
+                      </Button>
+                      <Button fx:id="btnAddtask" layoutX="34.0" layoutY="405.0" mnemonicParsing="false" onAction="#addTask" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" text="Add Task">
+                          <font>
+                              <Font name="System Bold" size="18.0" />
+                          </font>
+                      </Button>
+                  <Button fx:id="btnJobs" layoutX="34.0" layoutY="636.0" mnemonicParsing="false" onAction="#viewJobs" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" text="Add Jobs">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  </children>
+              </Pane>
+          </left>
+         <center>
+            <HBox prefHeight="940.0" prefWidth="1189.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="753.0" prefWidth="1081.0" style="-fx-background-color: white; -fx-border-color: #EFEFEF;">
+                     <children>
+                        <HBox prefHeight="71.0" prefWidth="860.0" style="-fx-background-color: #ADD8E6;">
+                           <children>
+                              <ImageView fitHeight="31.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons8-commercial-90.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="14.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-text-alignment: center;" text="Announcement">
+                                 <HBox.margin>
+                                    <Insets bottom="8.0" left="372.0" top="12.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="28.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets top="1.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="83.0" prefWidth="1164.0">
+                           <children>
+                              <Label prefHeight="5.0" prefWidth="163.0" text="Topic :">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="60.0" top="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="txtTopic"  prefHeight="30.0" prefWidth="363.0" style="-fx-background-color: white; -fx-border-color: #85B3D1FF; -fx-border-width: 0px 0px 1px 0px;">
+                                 <HBox.margin>
+                                    <Insets left="38.0" right="20.0" top="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <CheckBox fx:id="topicCheck1" mnemonicParsing="false" onAction="#setTopic1" text="Meeting">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="13.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin></CheckBox>
+                              <CheckBox fx:id="topicCheck2" mnemonicParsing="false" onAction="#setTopic2" text="Event">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="13.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="15.0" top="10.0" />
+                                 </HBox.margin>
+                              </CheckBox>
+                              <CheckBox fx:id="topicCheck3" mnemonicParsing="false" onAction="#setTopic3" text="Special Event">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="13.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="15.0" top="10.0" />
+                                 </HBox.margin>
+                              </CheckBox>
+                              <CheckBox fx:id="topicCheck4" mnemonicParsing="false" onAction="#setTopic4" text="Quick Notice">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="13.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="15.0" top="10.0" />
+                                 </HBox.margin>
+                              </CheckBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="319.0" prefWidth="1044.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label prefHeight="22.0" prefWidth="181.0" text="Annoucement :">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="60.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextArea fx:id="txtAnnouncement"  prefHeight="101.0" prefWidth="763.0" style="-fx-background-color: white; -fx-border-color: #85B3D1FF; -fx-border-width: 0px 0px 1px 0px;">
+                                 <HBox.margin>
+                                    <Insets left="19.0" top="10.0" />
+                                 </HBox.margin>
+                              </TextArea>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="110.0" prefWidth="1044.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="166.0" text="Visibility :">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="60.0" top="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ChoiceBox fx:id="choiceBox"  prefHeight="27.0" prefWidth="252.0" style="-fx-background-color: white; -fx-border-color: #85B3D1FF;">
+                                 <HBox.margin>
+                                    <Insets left="98.0" top="20.0" />
+                                 </HBox.margin>
+                              </ChoiceBox>
+                              <Label fx:id="visibilityAlertLabel" prefHeight="17.0" prefWidth="74.0">
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="25.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label prefHeight="20.0" prefWidth="116.0" text="Date :">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="100.0" top="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <DatePicker fx:id="datepicker" onAction="#getDate"  prefHeight="27.0" prefWidth="187.0" style="-fx-background-color: white; -fx-border-color: #85B3D1FF;">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="20.0" />
+                                 </HBox.margin>
+                              </DatePicker>
+                              <Label fx:id="dateAlertLabel" prefHeight="17.0" prefWidth="74.0">
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="25.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Button fx:id="btnviewMore" mnemonicParsing="false" onAction="#ViewMore" prefHeight="26.0" prefWidth="143.0" style="-fx-background-color: #85B3D1FF; -fx-border-color: #6b757e; -fx-background-radius: 5px;" text="View" textFill="WHITE">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="13.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="100.0" top="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Label fx:id="choiceLabel" prefHeight="43.0" prefWidth="142.0" textFill="WHITE" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="226.0" prefWidth="1044.0" style="-fx-border-color: #EFEFEF; -fx-border-width: 0px 0px 1px 0px;">
+                           <children>
+                              <Label fx:id="dateLabel" prefHeight="86.0" prefWidth="149.0" textFill="WHITE" />
+                              <Button fx:id="submitButton" maxWidth="300.0" mnemonicParsing="false" onAction="#submitButtonAction" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: #85B3D1FF;" text="Add" textFill="#080000">
+                                 <HBox.margin>
+                                    <Insets left="140.0" top="5.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button maxWidth="300.0" mnemonicParsing="false" onAction="#Edit" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: #85B3D1FF;" text="Update">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="50.0" top="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button maxWidth="300.0" mnemonicParsing="false" onAction="#Delete" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: #85B3D1FF;" text="Delete">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="50.0" top="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="135.0" style="-fx-background-color: #6b757e;" text="Clear" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="50.0" top="5.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="15.0" />
+                           </padding>
+                        </HBox>
+                        <VBox prefHeight="508.0" prefWidth="1164.0" style="-fx-background-color: #EFEFEF;">
+                           <children>
+                              <Label fx:id="topicLabel" prefHeight="17.0" prefWidth="355.0" textFill="#efefef" />
+                              <TextField fx:id="SearchBar" prefHeight="36.0" prefWidth="614.0" promptText="Search" style="-fx-background-color: white; -fx-border-color: #6b757e; -fx-background-radius: 10px; -fx-border-radius: 10px;">
+                                 <VBox.margin>
+                                    <Insets left="500.0" right="50.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TableView fx:id="table" onMouseClicked="#selectRow" prefHeight="360.0" prefWidth="944.0" stylesheets="@tableview.css">
+                                 <columns>
+                                    <TableColumn fx:id="topicCol" prefWidth="207.0" text="Topic" />
+                                    <TableColumn fx:id="annouCol" prefWidth="306.3333740234375" />
+                                    <TableColumn fx:id="dateCol" minWidth="0.0" prefWidth="235.6666259765625" text="Date" />
+                                    <TableColumn fx:id="visibilityCol" prefWidth="296.0" text="Visibility" />
+                                 </columns>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

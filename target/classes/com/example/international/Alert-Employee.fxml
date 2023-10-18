@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="767.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.international.Alert_EmployeeController">
+   <children>
+      <HBox prefHeight="767.0" prefWidth="1400.0">
+         <children>
+            <Pane id="b" prefHeight="767.0" prefWidth="330.0" style="-fx-background-color: white;" stylesheets="@tableview.css">
+               <children>
+                  <Label alignment="BASELINE_LEFT" layoutX="32.0" layoutY="25.0" prefHeight="56.0" prefWidth="285.0" text="Orbit International ">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnDash" layoutX="34.0" layoutY="105.0" mnemonicParsing="false" onAction="#dashboard" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" text="Dashboard">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAddApplicant" layoutX="34.0" layoutY="164.0" mnemonicParsing="false" onAction="#onActionAddApplicant" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" text="Add Applicant">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnViewApplicant" layoutX="34.0" layoutY="221.0" mnemonicParsing="false" onAction="#viewApplicant" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" text="View Applicant">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAlerts" layoutX="34.0" layoutY="281.0" mnemonicParsing="false" onAction="#showAlerts" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #FFCA40;" stylesheets="@tableview.css" text="Alerts">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnleaveRequest" layoutX="32.0" layoutY="339.0" mnemonicParsing="false" onAction="#LeaveRequest" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" text="Leave Requests">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnToDo" layoutX="34.0" layoutY="396.0" mnemonicParsing="false" onAction="#ToDo" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #EFEFEF;" text="To-Do List">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnLogout" layoutX="32.0" layoutY="701.0" mnemonicParsing="false" onAction="#Logout" prefHeight="40.0" prefWidth="260.0" style="-fx-background-color: #C8161D;" text="Log out">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="AlertCountLabel" layoutX="194.0" layoutY="292.0" prefHeight="20.0" prefWidth="20.0" style="-fx-alignment: center; -fx-background-color: red; -fx-background-radius: 10px;" />
+               </children>
+            </Pane>
+            <VBox prefHeight="758.0" prefWidth="1062.0" style="-fx-background-color: white; -fx-border-color: #efefef;">
+               <children>
+                  <HBox prefHeight="83.0" prefWidth="1168.0" style="-fx-background-color: #EFEFEF;">
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                     <children>
+                        <HBox prefHeight="85.0" prefWidth="1168.0" style="-fx-background-color: #ADD8E6;">
+                           <children>
+                              <ImageView fitHeight="44.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons8-home-alarm-90.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="16.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label fx:id="alertLabel" prefHeight="16.0" prefWidth="18.0" style="-fx-background-color: #FFCA40; -fx-border-radius: 5px; -fx-background-radius: 10px;">
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="2.0" left="5.0" right="2.0" top="2.0" />
+                                 </padding>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="45.0" prefWidth="81.0" style="-fx-text-alignment: center;" text="Alerts">
+                                 <HBox.margin>
+                                    <Insets left="459.0" top="16.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="10.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="108.0" prefWidth="1168.0" style="-fx-background-color: #EFEFEF;">
+                     <children>
+                        <TextField fx:id="searchBar" onMouseClicked="#searchReset" prefHeight="35.0" prefWidth="417.0" promptText="Search">
+                           <HBox.margin>
+                              <Insets left="100.0" top="35.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <CheckBox fx:id="topicCheck1" mnemonicParsing="false" onAction="#setTopic1" text="Meeting">
+                           <font>
+                              <Font name="Times New Roman Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="25.0" top="42.0" />
+                           </HBox.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="topicCheck2" mnemonicParsing="false" onAction="#setTopic2" text="Event">
+                           <font>
+                              <Font name="Times New Roman Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="25.0" top="42.0" />
+                           </HBox.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="topicCheck3" mnemonicParsing="false" onAction="#setTopic3" text="Special Event">
+                           <font>
+                              <Font name="Times New Roman Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="25.0" top="42.0" />
+                           </HBox.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="topicCheck4" mnemonicParsing="false" onAction="#setTopic4" text="Quick Notice">
+                           <font>
+                              <Font name="Times New Roman Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="25.0" top="42.0" />
+                           </HBox.margin>
+                        </CheckBox>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="table" onMouseClicked="#selectRow" prefHeight="548.0" prefWidth="1124.0" stylesheets="@tableview.css">
+                     <columns>
+                        <TableColumn fx:id="topicCol" prefWidth="233.0" style="-fx-font-size: 15px;" text="Topic" />
+                        <TableColumn fx:id="annouCol" minWidth="0.0" prefWidth="558.5" />
+                        <TableColumn fx:id="dateCol" maxWidth="4984.0" minWidth="0.0" prefWidth="250.0" style="-fx-font-size: 15px;" text="Date" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

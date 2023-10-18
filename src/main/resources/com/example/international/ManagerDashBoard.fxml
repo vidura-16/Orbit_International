@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="767.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.international.ManagerDashController">
+   <children>
+      <BorderPane prefHeight="775.0" prefWidth="1200.0">
+         <top>
+            <Pane prefHeight="120.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="Unamelabel" layoutX="862.0" layoutY="25.0" prefHeight="20.0" prefWidth="22.0" textFill="WHITE">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelName" layoutX="958.0" layoutY="39.0" onMouseClicked="#ViewProfile" prefHeight="42.0" prefWidth="232.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="profilePicView" fitHeight="73.0" fitWidth="73.0" layoutX="1204.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="date" layoutX="107.0" layoutY="66.0" prefHeight="20.0" prefWidth="211.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="time" layoutX="106.0" layoutY="9.0" prefHeight="52.0" prefWidth="239.0">
+                     <font>
+                        <Font name="System Bold Italic" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </top>
+         <bottom>
+            <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="770.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnAddEmployee" layoutX="105.0" layoutY="19.0" mnemonicParsing="false" onAction="#OnActionAddEmployee" prefHeight="80.0" prefWidth="370.0" style="-fx-background-color: #ffd3d3;" text="Add Employee">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@DashIcons/icons8_add_administrator_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAnnouncements" contentDisplay="TOP" layoutX="512.0" layoutY="19.0" mnemonicParsing="false" onAction="#OnActionAnnouncements" prefHeight="196.0" prefWidth="370.0" style="-fx-background-color: #bfbfbf;" text="Announcements">
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@DashIcons/icons8_commercial_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnViewEmployee" layoutX="105.0" layoutY="129.0" mnemonicParsing="false" onAction="#OnActionViewEmployee" prefHeight="80.0" prefWidth="370.0" style="-fx-background-color: #b2a6b1;" text="ViewEmployee">
+                     <graphic>
+                        <ImageView fitHeight="74.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@DashIcons/icons8_person_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAddApplicant" layoutX="912.0" layoutY="19.0" mnemonicParsing="false" onAction="#OnActionAddApplicant" prefHeight="80.0" prefWidth="370.0" style="-fx-background-color: #ffae92;" text="Add Applicant">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@DashIcons/icons8_add_user_group_woman_man_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnViewApplicant" layoutX="912.0" layoutY="129.0" mnemonicParsing="false" onAction="#OnActionViewApplicant" prefHeight="80.0" prefWidth="370.0" style="-fx-background-color: #ffca8c;" text="View Applicant">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@DashIcons/icons8_person_50px_1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAddTask" layoutX="512.0" layoutY="405.0" mnemonicParsing="false" onAction="#OnActionAddTask" prefHeight="80.0" prefWidth="370.0" style="-fx-background-color: #ffb5c1;" text="Add Task">
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@DashIcons/icons8_task_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnMonthlyReport" layoutX="105.0" layoutY="247.0" mnemonicParsing="false" onAction="#OnActionMonthlyReport" prefHeight="123.0" prefWidth="370.0" style="-fx-background-color: #99c2ff;" text="Employee Report">
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@DashIcons/icons8_management_50px_1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnApplicantReport" layoutX="105.0" layoutY="405.0" mnemonicParsing="false" onAction="#OnActionApplicantReport" prefHeight="80.0" prefWidth="370.0" style="-fx-background-color: #b1ffd2;" text="Applicant Report">
+                     <graphic>
+                        <ImageView fitHeight="67.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@DashIcons/icons8_personal_growth_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAddVaccancy" layoutX="512.0" layoutY="247.0" mnemonicParsing="false" onAction="#OnActionbtnAddVaccancy" prefHeight="123.0" prefWidth="370.0" style="-fx-background-color: #b9ffc0;" text="Add Vaccancy">
+                     <graphic>
+                        <ImageView fitHeight="69.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@DashIcons/icons8_architect_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSalary" layoutX="912.0" layoutY="247.0" mnemonicParsing="false" onAction="#OnActionSalary" prefHeight="123.0" prefWidth="370.0" style="-fx-background-color: #b6ffa9;" text="Salary">
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@DashIcons/icons8_cash_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSpomsorReport" layoutX="105.0" layoutY="517.0" mnemonicParsing="false" onAction="#OnActionSponsorReport" prefHeight="80.0" prefWidth="370.0" style="-fx-background-color: #fffc9e;" text="Sponsor Report">
+                     <graphic>
+                        <ImageView fitHeight="79.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@DashIcons/icons8_crowdfunding_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnMails" contentDisplay="TOP" layoutX="912.0" layoutY="517.0" mnemonicParsing="false" onAction="#OnActionMails" prefHeight="80.0" prefWidth="370.0" style="-fx-background-color: #a8c2ff;" text="Mails">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Button>
+                  <Button fx:id="btnLeaveRequests" contentDisplay="TOP" layoutX="912.0" layoutY="405.0" mnemonicParsing="false" onAction="#OnActionLeaveRequests" prefHeight="80.0" prefWidth="370.0" style="-fx-background-color: #b8ffd7;" text="Leave Requests">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Button>
+                  <ImageView fitHeight="40.0" fitWidth="63.0" layoutX="538.0" layoutY="533.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="40.0" fitWidth="100.0" layoutX="993.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@DashIcons/invite_30px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="100.0" layoutX="1021.0" layoutY="543.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@DashIcons/mail_30px.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btnIncome" layoutX="512.0" layoutY="517.0" mnemonicParsing="false" onAction="#showReport" prefHeight="80.0" prefWidth="370.0" style="-fx-background-color: #D2b4de;" text="Income &amp; expenses report">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@DashIcons/icons8_add_graph_report_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnLogout" layoutX="1102.0" layoutY="645.0" mnemonicParsing="false" onAction="#Logout" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: crimson;" text="Logout">
+                     <padding>
+                        <Insets left="31.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="42.0" fitWidth="112.0" layoutX="1127.0" layoutY="649.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@DashIcons/icons8_Logout_50px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

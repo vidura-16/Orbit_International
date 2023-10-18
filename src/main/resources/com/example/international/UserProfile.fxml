@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="568.0" prefWidth="731.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.international.UserProfileController">
+   <children>
+      <BorderPane layoutY="-1.0" prefHeight="568.0" prefWidth="737.0">
+         <top>
+            <Pane prefHeight="72.0" prefWidth="737.0" style="-fx-background-color: #e6e6fa;" BorderPane.alignment="CENTER">
+               <children>
+                  <Text layoutX="57.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Profile" wrappingWidth="172.89004135131836">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="labelUserProfilePass" layoutX="495.0" layoutY="26.0" prefHeight="19.0" prefWidth="121.0" text="Label" textFill="WHITE">
+                     <font>
+                        <Font size="1.0" />
+                     </font></Label>
+               </children>
+            </Pane>
+         </top>
+         <left>
+            <Pane prefHeight="509.0" prefWidth="737.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TabPane layoutY="-1.0" prefHeight="500.0" prefWidth="737.0" style="-fx-background-color: #e6e6fa;" stylesheets="@tabpane.css" tabClosingPolicy="UNAVAILABLE">
+                     <tabs>
+                        <Tab style="-fx-background-color: #c0d6e4;" text="  General Information">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="525.0" prefWidth="737.0" style="-fx-background-color: #E0EEEE;">
+                                 <children>
+                                    <ImageView fx:id="imageLabel" fitHeight="162.0" fitWidth="159.0" layoutX="23.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" />
+                                    <GridPane layoutX="182.0" layoutY="82.0" prefHeight="341.0" prefWidth="482.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.01601432812515" minWidth="10.0" prefWidth="20.951965639648485" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="238.42397593359385" minWidth="10.0" prefWidth="169.17602800878922" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="313.3440018437503" minWidth="10.0" prefWidth="299.32799383203155" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="79.44000028320315" minHeight="10.0" prefHeight="39.70399875781254" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="108.23198484130862" minHeight="10.0" prefHeight="33.79201515234378" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="87.94399808593752" minHeight="0.0" prefHeight="33.02398650781254" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="115.9679896796876" minHeight="10.0" prefHeight="32.25601150000003" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="95.46398709960943" minHeight="10.0" prefHeight="33.55998476562502" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="83.71200653906254" minHeight="1.7679908828125122" prefHeight="35.86397390625001" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="83.71200653906254" minHeight="10.0" prefHeight="40.5439915507813" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="91.91200425781255" minHeight="10.0" prefHeight="36.704005847656276" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="91.91200425781255" minHeight="10.0" prefHeight="35.7039394179688" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label fx:id="positionLabel" prefHeight="35.0" prefWidth="166.0" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="emailLabel" prefHeight="22.0" prefWidth="290.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="19.0" prefWidth="107.0" text="Email" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="21.0" prefWidth="127.0" text="Contact Number" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="addressLabel" prefHeight="39.0" prefWidth="290.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="19.0" prefWidth="107.0" text="Address" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="22.0" prefWidth="165.0" text="Date of Join" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="contactLabel" prefHeight="22.0" prefWidth="290.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="dateJoinLabel" prefHeight="22.0" prefWidth="290.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="22.0" prefWidth="165.0" text="NIC " GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="22.0" prefWidth="165.0" text="Salary" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="salaryLabel" prefHeight="22.0" prefWidth="290.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="nicLabel" prefHeight="22.0" prefWidth="290.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="22.0" prefWidth="165.0" text="Date of Birth" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="22.0" prefWidth="165.0" text="Gender" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="dobLabel" prefHeight="22.0" prefWidth="290.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="genderLabel" prefHeight="22.0" prefWidth="290.0" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </GridPane>
+                                    <Label fx:id="nameLabel" layoutX="200.0" layoutY="29.0" prefHeight="52.0" prefWidth="337.0">
+                                       <font>
+                                          <Font name="System Bold" size="30.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab style="-fx-background-color: #c0d6e4;" text="Change Password">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #E0EEEE;">
+                                 <children>
+                                    <GridPane layoutX="72.0" layoutY="56.0" prefHeight="247.0" prefWidth="567.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="227.32801433300799" minWidth="10.0" prefWidth="209.8240294765627" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="321.95197611718777" minWidth="10.0" prefWidth="318.87995463281277" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="95.27200101562502" minHeight="10.0" prefHeight="54.42399442968755" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="153.63997434326174" minHeight="10.0" prefHeight="43.543980761718785" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="153.63997434326174" minHeight="10.0" prefHeight="31.255991925781274" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="182.688001381836" minHeight="6.272015349609404" prefHeight="30.48800813281251" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="182.688001381836" minHeight="10.0" prefHeight="33.559982916015656" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="182.688001381836" minHeight="10.0" prefHeight="26.111997507812504" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="182.688001381836" minHeight="10.0" prefHeight="31.48800073437502" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label prefHeight="35.0" prefWidth="124.0" text="New Password" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="usernameLabel" prefHeight="33.0" prefWidth="237.0" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="38.0" prefWidth="91.0" text="Username ">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="36.0" prefWidth="132.0" text="Old Password" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="34.0" prefWidth="204.0" text="New Password Confirmation" GridPane.rowIndex="5">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <PasswordField fx:id="txtOldPassword" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <PasswordField fx:id="txtNewPassword" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <PasswordField fx:id="txtPasswordConfirm" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <Label fx:id="labelOldPassword" prefHeight="15.0" prefWidth="306.0" textFill="#e80707" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelNewPassword" prefHeight="12.0" prefWidth="307.0" textFill="#e80707" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelNewPasswordConfirm" prefHeight="19.0" prefWidth="326.0" textFill="#e80707" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </GridPane>
+                                    <Button fx:id="passwordChangeSaveBtn" layoutX="402.0" layoutY="345.0" mnemonicParsing="false" onAction="#passwordChangeSave" prefHeight="31.0" prefWidth="90.0" style="-fx-background-color: #85B3D1FF;" text="Save">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font></Button>
+                                    <Button layoutX="525.0" layoutY="346.0" mnemonicParsing="false" onAction="#CancelPassword" prefHeight="28.0" prefWidth="101.0" style="-fx-background-color: red;" text="Cancel">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font></Button>
+                                    <ImageView fitHeight="16.0" fitWidth="26.0" layoutX="412.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/key.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="19.0" fitWidth="16.0" layoutX="533.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/insecure.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </children>
+            </Pane>
+         </left>
+      </BorderPane>
+      <ImageView fitHeight="27.0" fitWidth="26.0" layoutX="-117.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
